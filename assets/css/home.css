@@ -1,0 +1,50 @@
+#MyInfo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 50vh;
+    transform: translateY(-75%);
+
+}
+
+.cont-left {
+    width: 45%;
+    text-align: center;
+}
+
+#cursor {
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+#SocialNetwork img {
+    margin-left: 10px;
+}
+
+.cont-right {
+}
+
+
+.avatar {
+    width: 85%;
+    border-radius: 100%;
+    padding: 2%;
+    background: linear-gradient(to bottom, #51127f, #0f1589);
+    mask: initial;
+    -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+}

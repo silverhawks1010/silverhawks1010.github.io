@@ -1,0 +1,22 @@
+header ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-variant: all-small-caps;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover {
+    color: #d3d3d3;
+
+}

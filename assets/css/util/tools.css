@@ -1,0 +1,38 @@
+.title-gradient {
+    background: linear-gradient(to bottom, #ffffff, #c2c2c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient {
+    background: linear-gradient(to bottom, #e70000, #7a0101);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Animations */
+
+.opacity {
+    animation: opacity 1s;
+}
+
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    } to {
+          opacity : 1;
+      }
+}
+
+.slide {
+    animation: slide 1s;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(1000px);
+    } to  {
+        transform: translateX(0px);
+          }
+}

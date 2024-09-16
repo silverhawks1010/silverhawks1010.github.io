@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../../fonts/Montserrat-Regular.woff") format("woff");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    background: linear-gradient(to bottom, #0f1589, #51127f);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    color: white;
+    font-family: 'Montserrat';
+    overflow: hidden;
+}
