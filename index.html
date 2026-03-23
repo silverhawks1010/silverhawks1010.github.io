@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fiche de Personnage</title>
+    <title>Yukio Kuran</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -868,6 +868,109 @@
         }
         .vision-text { font-size: 1rem; line-height: 1.8; color: var(--text-muted); }
 
+        /* ─── OBJECTIFS COURT TERME ─── */
+        .ct-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .ct-tag {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 0.68rem;
+            letter-spacing: 0.55em;
+            color: var(--sand-mid);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .ct-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.1rem, 2vw, 1.6rem);
+            font-weight: 900;
+            color: var(--sand-light);
+        }
+        .ct-line {
+            width: 55px; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent);
+            margin: 1.2rem auto 0;
+        }
+
+        .ct-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .ct-card {
+            position: relative;
+            padding: 2rem;
+            border: 1px solid rgba(201,168,76,0.1);
+            border-left: 2px solid var(--sand-dark);
+            background: rgba(30,18,8,0.6);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        .ct-card:hover {
+            border-color: rgba(201,168,76,0.3);
+            border-left-color: var(--gold);
+            transform: translateY(-4px);
+        }
+        .ct-card-num {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 2.2rem;
+            color: rgba(201,168,76,0.08);
+            line-height: 1;
+            margin-bottom: 0.2rem;
+        }
+        .ct-card-title {
+            font-family: 'Cinzel', serif;
+            font-size: 0.82rem;
+            letter-spacing: 0.2em;
+            color: var(--sand-light);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        .ct-card-text {
+            font-size: 0.98rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+        }
+        .ct-card-text .ct-when {
+            font-family: 'Cinzel', serif;
+            font-size: 0.62rem;
+            letter-spacing: 0.2em;
+            color: var(--rust);
+            display: block;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        /* Séparateur entre court terme et futur */
+        .section-divider {
+            position: relative;
+            text-align: center;
+            margin: 5rem 0;
+        }
+        .section-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(201,168,76,0.25), transparent);
+        }
+        .section-divider-label {
+            position: relative;
+            display: inline-block;
+            background: var(--earth-mid);
+            padding: 0.5rem 2rem;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.5em;
+            color: var(--sand-mid);
+            text-transform: uppercase;
+            border: 1px solid rgba(201,168,76,0.15);
+        }
+
         /* ─── RESPONSIVE ─── */
         @media (max-width: 900px) {
             .identity-grid { grid-template-columns: 1fr; }
@@ -895,7 +998,7 @@
     <div class="nav-logo">砂</div>
     <ul class="nav-links">
         <li><a href="#identite">Identité</a></li>
-        <li><a href="#competences">Compétences</a></li>
+        <!-- <li><a href="#competences">Compétences</a></li> -->
         <li><a href="#histoire">Histoire</a></li>
         <li><a href="#ideologie">Idéologie</a></li>
         <li><a href="#objectifs">Objectifs</a></li>
@@ -1207,10 +1310,77 @@
             </div>
         </div>
 
+        <!-- Objectifs à court terme -->
+        <div class="ct-header reveal">
+            <span class="ct-tag">短期目標 · Rang Genin</span>
+            <h2 class="ct-title">Objectifs à Court Terme</h2>
+            <div class="ct-line"></div>
+        </div>
+
+        <div class="ct-list">
+
+            <div class="ct-card reveal">
+                <div class="ct-card-num">一</div>
+                <h4 class="ct-card-title">Registre des Shinobi Rencontrés</h4>
+                <p class="ct-card-text">
+                    <span class="ct-when">· Dès les premières rencontres</span>
+                    Consigner méthodiquement chaque shinobi croisé : nom, village d'origine, style de combat
+                    observé, affinités de chakra supposées, comportement sous pression. Un carnet tenu à jour
+                    en permanence, jamais montré, consulté avant chaque mission. L'objectif n'est pas de
+                    surveiller — c'est de ne jamais être pris au dépourvu face à quelqu'un qu'il a déjà vu agir.
+                </p>
+            </div>
+
+            <div class="ct-card reveal">
+                <div class="ct-card-num">二</div>
+                <h4 class="ct-card-title">Fonder un Cercle d'Éclaireurs</h4>
+                <p class="ct-card-text">
+                    <span class="ct-when">· Dans les premiers mois</span>
+                    Rassembler des shinobi — de tout rang, de toute spécialité — partageant un intérêt pour
+                    la discrétion, la prise d'information et la reconnaissance. Un groupe ouvert, sans
+                    hiérarchie formelle, où l'on s'entraîne ensemble : filatures, camouflage, collecte de
+                    renseignements, communication codée. Pas une unité militaire — un espace d'apprentissage
+                    mutuel qui crée du lien au sein du village.
+                </p>
+            </div>
+
+            <div class="ct-card reveal">
+                <div class="ct-card-num">三</div>
+                <h4 class="ct-card-title">Trouver un Sensei Sensoriel</h4>
+                <p class="ct-card-text">
+                    <span class="ct-when">· En parallèle des premières missions</span>
+                    Identifier dans le village un shinobi maîtrisant les techniques de perception sensorielle
+                    et convaincre cette personne de le former. La recherche elle-même est l'objectif :
+                    enquêter discrètement sur qui possède ces capacités, s'en approcher, accepter d'être
+                    mis à l'épreuve ou refusé. Sans ces fondations, aucun de ses jutsu de reconnaissance
+                    ne pourra atteindre son plein potentiel.
+                </p>
+            </div>
+
+            <div class="ct-card reveal">
+                <div class="ct-card-num">四</div>
+                <h4 class="ct-card-title">Cartographier le Pays du Vent</h4>
+                <p class="ct-card-text">
+                    <span class="ct-when">· Sur la durée, mission après mission</span>
+                    Compiler une cartographie détaillée du Pays du Vent — routes secondaires, points d'eau,
+                    zones de visibilité, goulots d'étranglement stratégiques, positions défensives naturelles.
+                    Un travail de longue haleine à remettre à ses supérieurs, qui pourrait s'avérer décisif
+                    lors de conflits ou de reconquêtes territoriales. À terme, étendre ce travail aux pays
+                    voisins au fil des déplacements.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Séparateur -->
+        <div class="section-divider reveal">
+            <span class="section-divider-label">Objectifs à Long Terme · 長期目標</span>
+        </div>
+
         <!-- Jutsu en développement -->
         <div class="section-header reveal" style="margin-bottom: 3rem;">
             <span class="section-tag">術</span>
-            <h2 class="section-title" style="font-size: clamp(1.2rem, 2.5vw, 1.8rem);">Il souhaite crée des jutsu tel que les suivants : </h2>
+            <h2 class="section-title" style="font-size: clamp(1.2rem, 2.5vw, 1.8rem);">Jutsu en Développement</h2>
             <div class="section-line"></div>
         </div>
 
